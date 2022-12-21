@@ -1,0 +1,12 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://10.20.14.93:8080
+functions:
+  show-html:
+    lang: python3
+    handler: ./show-html
+    image: andrei50/show-html:latest
+    enviroment:
+      content_type: text/html
+
